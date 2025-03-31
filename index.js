@@ -30,6 +30,10 @@ app.use((err, req, res, next) => {
     res.status(500).json({ message: 'Something went wrong!' });
 });
 
+app.get("/", (req, res) => {
+    res.status(200).send("Welcome to the E-Commerce API");
+});
+
 // Start server
 ctdb().then(() => {
     app.listen(PORT, () => {
